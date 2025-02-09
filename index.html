@@ -63,19 +63,19 @@
         }
         .shop {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
             justify-content: center;
             padding: 20px;
-            min-height: 200vh;
         }
         .item {
             background: white;
             color: black;
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
         .item:hover {
             transform: scale(1.05);
@@ -83,6 +83,8 @@
         }
         .item img {
             width: 100%;
+            height: 100px;
+            object-fit: cover;
             border-radius: 10px;
         }
         .cart-sidebar {
@@ -152,6 +154,18 @@
             <h3>Damen Duft 1</h3>
             <p>Preis: 15€</p>
             <button onclick="addToCart('Damen Duft 1', 15)">In den Warenkorb</button>
+        </div>
+        <div class="item" data-category="unisex" data-price="12">
+            <img src="https://via.placeholder.com/150" alt="Unisex Duft 1">
+            <h3>Unisex Duft 1</h3>
+            <p>Preis: 12€</p>
+            <button onclick="addToCart('Unisex Duft 1', 12)">In den Warenkorb</button>
+        </div>
+        <div class="item" data-category="men" data-price="20">
+            <img src="https://via.placeholder.com/150" alt="Herren Duft 2">
+            <h3>Herren Duft 2</h3>
+            <p>Preis: 20€</p>
+            <button onclick="addToCart('Herren Duft 2', 20)">In den Warenkorb</button>
         </div>
     </div>
 
