@@ -9,8 +9,8 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: black;
-            color: white;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
             overflow-x: hidden;
             scroll-behavior: smooth;
@@ -22,11 +22,9 @@
             justify-content: center;
             font-size: 3rem;
             font-weight: bold;
-            position: relative;
-            transition: opacity 0.5s ease;
-        }
-        .fade-out {
-            opacity: 0;
+            background: linear-gradient(to bottom, #ffebcd, #f4f4f4);
+            color: #444;
+            margin-bottom: 20px;
         }
         .filter-container {
             display: flex;
@@ -56,36 +54,37 @@
             text-align: left;
         }
         .dropdown-content button:hover {
-            background-color: gray;
+            background-color: #ddd;
         }
         .dropdown:hover .dropdown-content {
             display: block;
         }
         .shop {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             justify-content: center;
             padding: 20px;
         }
         .item {
             background: white;
-            color: black;
+            color: #333;
             padding: 10px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
         .item:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
         .item img {
             width: 100%;
-            height: 100px;
+            height: 150px;
             object-fit: cover;
             border-radius: 10px;
+            margin-bottom: 10px;
         }
         .cart-sidebar {
             position: fixed;
@@ -97,7 +96,8 @@
             color: black;
             padding: 20px;
             transition: right 0.3s ease;
-            box-shadow: -4px 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
         }
         .cart-sidebar.active {
             right: 0;
@@ -117,6 +117,10 @@
             border: none;
             cursor: pointer;
             width: 100%;
+            border-radius: 5px;
+        }
+        .cart-button:hover {
+            background: darkred;
         }
     </style>
 </head>
@@ -144,25 +148,25 @@
     
     <div class="shop" id="shop">
         <div class="item" data-category="men" data-price="10">
-            <img src="https://via.placeholder.com/150" alt="Herren Duft 1">
+            <img src="https://via.placeholder.com/200x150" alt="Herren Duft 1">
             <h3>Herren Duft 1</h3>
             <p>Preis: 10€</p>
             <button onclick="addToCart('Herren Duft 1', 10)">In den Warenkorb</button>
         </div>
         <div class="item" data-category="women" data-price="15">
-            <img src="https://via.placeholder.com/150" alt="Damen Duft 1">
+            <img src="https://via.placeholder.com/200x150" alt="Damen Duft 1">
             <h3>Damen Duft 1</h3>
             <p>Preis: 15€</p>
             <button onclick="addToCart('Damen Duft 1', 15)">In den Warenkorb</button>
         </div>
         <div class="item" data-category="unisex" data-price="12">
-            <img src="https://via.placeholder.com/150" alt="Unisex Duft 1">
+            <img src="https://via.placeholder.com/200x150" alt="Unisex Duft 1">
             <h3>Unisex Duft 1</h3>
             <p>Preis: 12€</p>
             <button onclick="addToCart('Unisex Duft 1', 12)">In den Warenkorb</button>
         </div>
         <div class="item" data-category="men" data-price="20">
-            <img src="https://via.placeholder.com/150" alt="Herren Duft 2">
+            <img src="https://via.placeholder.com/200x150" alt="Herren Duft 2">
             <h3>Herren Duft 2</h3>
             <p>Preis: 20€</p>
             <button onclick="addToCart('Herren Duft 2', 20)">In den Warenkorb</button>
